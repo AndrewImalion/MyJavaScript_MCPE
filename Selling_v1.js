@@ -37,7 +37,7 @@ function procCmd(cmd)
         var cmid = Player.getCarriedItem();
         var cmsp = Player.getCarriedItemData();
         var cmprc = Player.getCarriedItemCount();
-        var cmtg = "§e自定义商品";
+        var cmtg = "§e自定义商品";                  //TODO能够显示自定义商品名
         prcmm.push([cmid, cmsp, cmprc, cmtg]);
         print("new commercial added")
     };
