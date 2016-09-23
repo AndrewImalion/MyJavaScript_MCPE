@@ -8,7 +8,7 @@ var compass = 0;
 function newLevel()
 {
     print("Building ver1.0 @BaronChang");
-    clientMessage("Welcome to use ¡ìa<BUILDING>");
+    clientMessage("Welcome to use Â¡Ã¬a<BUILDING>");
     //add index of buildings here.
 };
 
@@ -43,7 +43,7 @@ function useItem(x, y, z, itemId, blockId, side)
     //set carried item id,to know what the player is carrying.
     switch (compass) {
         case 0:; break;
-        case 1: buildCube([x, y, z], carryingitem[0], carryingitem[1], 8); break;
+        case 1: buildCube([x, y, z], carryingitem[0], carryingitem[1], [8,8,8]); break;
             //add new buildings here.
     }
 
@@ -52,5 +52,5 @@ function useItem(x, y, z, itemId, blockId, side)
 function procCmd(cmd)
 {
     compass = cmd;
-    clientMessage("Now,the compass is¡ìc" + compass);
+    clientMessage("Now,the compass isÂ¡Ã¬c" + compass);
 };
