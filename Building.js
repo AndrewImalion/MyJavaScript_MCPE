@@ -50,7 +50,7 @@ function buildCube(point, id, data, sizes)
 function buildTube(point, id, data, sizes)
 {
     buildCube(point, id, data, sizes);
-    buildCube(tripelArriesAdd(point ,[1, 0, 1]), 0, 0, sizes + [-2, 0, -2]);
+    buildCube(tripelArriesAdd(point ,[1, 0, 1]), 0, 0, sizes + [-2, 0, -2]);//TO fixhere
 };
 
 function procCmd(cmd)
