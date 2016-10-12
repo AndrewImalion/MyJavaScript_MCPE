@@ -17,7 +17,7 @@ function buildCube(point, stuff, sizes) {
             }
         }
     };
-    clientMessage("SET BLOCKS ¡ìb" + (sizes[0] * sizes[1] * sizes[2]));
+    clientMessage("SET BLOCKS Â¡Ã¬b" + (sizes[0] * sizes[1] * sizes[2]));
 };
 
 function buildVTube(point, stuff, sizes) {//vertical tube
@@ -32,8 +32,18 @@ function buildHTube(point, stuff, sizes) {//horizonal tube
 
 function putColumn(point, stuff, highth) {
     buildCube(point, stuff, [1, highth, 1]);
-    clientMessage("SET A COLUMN HIGHTH IN ¡ìb" + highth);
+    clientMessage("SET A COLUMN HIGHTH IN Â¡Ã¬b" + highth);
 };
 
 //Structive========================================================================
 //TODO:puttree,buildstair
+
+//door===================
+    /*  direction: north=0, east=1, south=2, west=3;
+        type:64=oak; 71=iron; 193=spruce; 194=birch; 
+             195=jungle; 196=acacia; 197=dark-oak
+    */
+function putDoor(point, type, direction) {   
+    putBlock(point, [type, direction]);
+    putBlock([point[0], point[1] + 1, point[2]], [type, 8]);
+};
